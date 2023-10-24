@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta</title>
+
+    <!--LINK USADO PARA PEGAR ALGUMAS COMANDOS, SITE: BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<!--//
+INTEGRANTES DO GRUPO
+
+Luiz Fernando de Sena Abreu
+Jeferson Amaral
+Thais Lopes
+Thalita Lopes
+-->
+<body>
+
+    <form action="" name="cadastro" method="post">
+        <!--TITULO DO FORMULÁRIO DO CADASTRO DE CONTA-->
+        <div class="alert alert-success" role="alert">
+            <center><h1>Cadastre-se</h1></center>
+          </div>
+        
+          <!--FORMULÁRIO DE CADASTRO DE CONTA-->
+        <div class="container">
+            <div class="box">
+               Nome <input type="text" name="nome" placeholder="Maria" size="20" id="nome_id" required> <!--REQUIRED = USADO PARA INDICAR QUE É OBRIGATORIO PREENCHER ESSE CAMPO-->
+        <br>
+                Sobrenome <input type="text" name="sobrenome" placeholder="Alves da Silva" size="40" id="sobrenome_id" required>
+        <br>
+                Telefone <input type="tel" name="telefone" placeholder="(00) 00000-0000" size="40"id="telefone_id" maxlength="11" required>
+        <br>
+                 Email <input type="email" name="email" placeholder="nome@exemplo.com" size="40" id="email_id" required>
+       <br>
+                Senha <input type="password" name="senha" placeholder="Digite sua senha" size="40" required onchange="confirmasenha ( )">
+         <br>
+                 Insira sua senha novamente <input type="password" name="confirma" placeholder="Digite sua senha novamente" size="40" required onchange="confirmasenha ( )">
+                 <br>      
+         <center><a href="paginaprincipal.html"><button type="button" class="btn btn-primary btn-lg" onclick="criar ( )" size="20">Criar conta</button></a></center>
+         <br>
+         <center><a href="login.php"><button type="button" class="btn btn-primary btn-lg" size="20">Voltar</button></a></center>
+     </div>
+     </div>
+    </form>
+
+    <!--ALERTA CRIADO UTILIZANDO O JAVA PARA MOSTRAR O NOME DIGITADO--> 
+    <!--JAVA UTILIZADO TAMBÉM PARA CONFERIR AS SENHAS DIGITADAS-->
+    <script type="text/javascript">
+        var js_nome;
+        
+        function criar ( ) {
+            js_nome = document.cadastro.nome.value;
+            alert ("Conta criada com sucesso! Seja bem vindo(a) "+js_nome );
+        }
+
+        function confirmasenha ( ) {
+       var senha = cadastro.senha.value;
+       var confirma = cadastro.confirma. value;
+
+       if( senha == "" /senha.length <= 5 ){
+        alert ('Preencha o campo "senha" com no minimo 6 caracteres');
+        cadastro.senha.focus();
+        return false;
+       }
+
+       if( confirma == "" /senha.length <= 5 ){
+        alert ('Preencha o campo "senha" com no minimo 6 caracteres');
+        cadastro.confirma.focus();
+        return false;
+       }
+
+       if (senha != confirma){
+        alert('As senhas não se coincidem');
+        cadastro.senha.focus();
+        return false;
+       }
+          
+        }
+    </script>
+
+<!--CUSTOMIZAÇÃO DE PÁGINA SEM PRECISAR CRIAR OUTRO ARQUIVO PARA O CSS-->
+    <style>
+        body{
+            margin: 0;
+            background-color: rgb(44, 44, 44);
+        }
+        .container{
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 35px;
+            background-color: black;
+            border-radius: 20px;
+            box-shadow: 0px 10px 40px #00ff88;
+        }
+        .box{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        .box input{
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            background-color:rgb(44, 44, 44)  ;
+            color: #f0ffffde;
+        }
+        .box input::placeholder{
+           color: #f0ffff94;
+        }
+        .box button{
+            background-color: #00ff88;
+            color: rgb(8, 0, 8);
+            border-radius: 15px;
+        }
+    </style>
+</body>
+</html>

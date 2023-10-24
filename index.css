@@ -1,0 +1,283 @@
+/*
+INTEGRANTES DO GRUPO
+
+Luiz Fernando de Sena Abreu
+Jeferson Amaral
+Thais Lopes
+Thalita Lopes
+*/
+
+
+/*CARROCEL*/
+
+section.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slider-content{
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+.slider-content input{
+    display: none;
+}
+
+.slider-box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.slider-box img{
+    width: 97%;
+    height: 75%;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #e6e6e6;
+
+}
+
+/***LAYOUT**/
+
+#area-cabecalho {
+
+    background-color: #111111;
+    padding: 15px;
+    text-align: center;
+   
+    
+}
+/* AREA MENU*/
+#area-menu{
+    text-align: center;
+    margin-top: 0px;
+    background-color: #111111;
+    list-style: none;
+    padding: 0 ;
+    width: 100%;
+    height: 100%;
+
+}
+#area-menu a{
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: background.3s;
+    font-size: 20px;
+}
+#area-menu a:hover{
+    background-color: #00ff88;
+}
+
+#area-principal {
+  width: 920px;
+  margin: 0 auto;
+  padding: 15px;
+ }
+
+#area-postagens{
+    width: 660px;
+    float: left;
+    
+}
+
+.data-postagem {
+    font-size: 0.8em;
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display:block;
+    
+}
+
+.postagem {
+    padding: 20px;
+    margin-bottom: 20px;
+     background: white;
+}
+
+
+#area-lateral{
+    width: 240px;
+    float: right;
+}
+
+.conteudo-lateral {
+background-color: white;
+padding: 10px;
+margin-bottom: 1px;
+}
+
+.postagem-lateral{
+
+    text-emphasis: circ
+}
+
+#rodape {
+    clear: both;
+    background-color: #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+/*aFormatacao do menu*/
+a {
+text-decoration-color: #FFF
+
+}
+
+ a:link, a:visited {
+    color: #FFF;
+    padding: 8px 12px;
+}
+a:hover {
+    color: #f7b600;
+    background: #FFF
+    
+    
+    
+}
+
+/*Formtaçao em geral*/
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 2.5em;
+
+
+}
+h2 {
+    color: #f7f5ef;
+    text-align: auto;
+    
+
+}
+
+h3 { color:#565656;
+    background: #ccc;
+    padding: 5px;
+
+
+}
+
+.branco{
+    color: white;
+}
+
+
+/*paginas do site*/
+
+.sobre-nos{
+
+    text-decoration: solid;
+    text-align: center;
+}
+
+/*Exercicios*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+h4{
+    font-family: didot;
+    font-size: 40px;
+    color: #00ff88;
+}
+h5{
+    font-weight: bold;
+    text-align: center;
+}
+.card{
+    background-color: #34eb95;
+}
+
+nav{
+    text-align: center;
+    margin-top: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 0px 50px 0px 0;
+    font-size: 25pt;
+    position: relative;
+}
+
+nav a::after{
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: #00ff88;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+    box-shadow: 50px #c8dbd2;
+}
+
+nav a:hover::after{
+    width: 100%;
+
+}
+.rodape{
+    width: 100%;
+    background-color: rgb(48, 47, 47);
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.rodape a{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 20px;
+    
+}
